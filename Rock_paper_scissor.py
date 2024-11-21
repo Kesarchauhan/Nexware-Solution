@@ -1,10 +1,10 @@
 import random
 
-# Function to get the computer's choice
-def get_computer_choice():
+# get the computer's choice
+def get_compu ter_choice():
     return random.choice(['rock', 'paper', 'scissors'])
 
-# Function to determine the winner
+#determine the winner
 def determine_winner(user_choice, computer_choice):
     if user_choice == computer_choice:
         return "tie"
@@ -15,7 +15,7 @@ def determine_winner(user_choice, computer_choice):
     else:
         return "computer"
 
-# Function to display feedback for each round
+# display feedback for each round
 def display_feedback(winner):
     if winner == "tie":
         return random.choice([
@@ -33,7 +33,7 @@ def display_feedback(winner):
             "Ouch! The computer got the better of you."
         ])
 
-# Main function to play the game
+# Main function 
 def rock_paper_scissors_game():
     print("Welcome to the Rock-Paper-Scissors Game!")
     print("Instructions:")
@@ -73,7 +73,6 @@ def rock_paper_scissors_game():
         print(feedback)
         print(f"Scores -> You: {user_score}, Computer: {computer_score}\n")
 
-        # Save the round result to game history
         result = "You won!" if winner == "user" else "Computer won!" if winner == "computer" else "Tie"
         game_history.append((user_choice, computer_choice, result))
 
